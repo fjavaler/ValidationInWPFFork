@@ -13,7 +13,7 @@ namespace D_Validation_ByAnnotations
     /// Username property with validation attributes.
     /// </summary>
     [Required(ErrorMessage = "Must not be empty.")]
-    [StringLength(50, MinimumLength = 5, ErrorMessage = "Must be at least 5 characters.")]
+    [StringLength(50, MinimumLength = 5, ErrorMessage = "Must be at least {2} characters.")]
     public string Username
     {
       get { return _username; }
