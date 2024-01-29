@@ -12,9 +12,13 @@
   <Grid Margin="100">
     <StackPanel>
       <Label>Username</Label>
-      <TextBox Validation.ErrorTemplate="{StaticResource errorTemplate}">
+      <TextBox
+        Validation.ErrorTemplate="{StaticResource errorTemplate}">
         <TextBox.Text>
-          <Binding Path="Username" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
+          <Binding
+            Path="Username"
+            ValidatesOnDataErrors="True"
+            UpdateSourceTrigger="PropertyChanged">
             <Binding.ValidationRules>
               <local:MinimumCharacterRule MinimumCharacters="5"/>
             </Binding.ValidationRules>
