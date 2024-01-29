@@ -14,7 +14,6 @@
       <Label>Username</Label>
       <TextBox Text="{Binding Username, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}"
                      Validation.ErrorTemplate="{StaticResource errorTemplate}"/>
-
       <Button>Submit</Button>
     </StackPanel>
   </Grid>
