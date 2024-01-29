@@ -8,7 +8,14 @@ namespace A_Validation_ByException
 {
   public class RegistrationVM : ObservableObject
   {
+    /// <summary>
+    /// Username backing field.
+    /// </summary>
     private string _username;
+
+    /// <summary>
+    /// Username property.
+    /// </summary>
     public string Username
     {
       get { return _username; }
