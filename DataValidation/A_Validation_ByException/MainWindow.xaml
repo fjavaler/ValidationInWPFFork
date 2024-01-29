@@ -6,16 +6,15 @@
         xmlns:local="clr-namespace:A_Validation_ByException"
         mc:Ignorable="d"
         Title="Validation By Exception" Height="450" Width="800">
-    <Window.DataContext>
-        <local:RegistrationVM/>
-    </Window.DataContext>
-    <Grid Margin="100">
-        <StackPanel>
-            <Label>Username</Label>
-            <TextBox Text="{Binding Username, ValidatesOnExceptions=True,
+  <Window.DataContext>
+    <local:RegistrationVM/>
+  </Window.DataContext>
+  <Grid Margin="100">
+    <StackPanel>
+      <Label>Username</Label>
+      <TextBox Text="{Binding Username, ValidatesOnExceptions=True,
                 UpdateSourceTrigger=PropertyChanged}"/>
-
-            <Button>Submit</Button>
-        </StackPanel>
-    </Grid>
+      <Button>Submit</Button>
+    </StackPanel>
+  </Grid>
 </Window>

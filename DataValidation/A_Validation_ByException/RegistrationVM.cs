@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace A_Validation_ByException
 {
-    public class RegistrationVM : ObservableObject
+  public class RegistrationVM : ObservableObject
+  {
+    private string _username;
+    public string Username
     {
-        private string _username;
-        public string Username
-        {
-            get { return _username; }
-            set
-            {
-                if (string.IsNullOrWhiteSpace(value))
-                    throw new ArgumentException("Username cannot be empty.");
+      get { return _username; }
+      set
+      {
+        if (string.IsNullOrWhiteSpace(value))
+          throw new ArgumentException("Username cannot be empty.");
 
-                OnPropertyChanged(ref _username, value);
-            }
-        }
+        OnPropertyChanged(ref _username, value);
+      }
     }
+  }
 }
