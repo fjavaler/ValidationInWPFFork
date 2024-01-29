@@ -17,7 +17,7 @@ namespace C_Validation_ByCustom
       string charString = value as string;
 
       if (charString.Length < MinimumCharacters)
-        return new ValidationResult(false, $"User atleast {MinimumCharacters} characters.");
+        return new ValidationResult(false, $"User at least {MinimumCharacters} characters.");
 
       return new ValidationResult(true, null);
     }
