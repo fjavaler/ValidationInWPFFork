@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace C_Validation_ByCustom
 {
@@ -16,7 +12,7 @@ namespace C_Validation_ByCustom
     public event PropertyChangedEventHandler PropertyChanged;
 
     /// <summary>
-    /// Notify a property change
+    /// Notify a property change.
     /// </summary>
     /// <param name="propertyName">Name of property to update</param>
     protected virtual void OnPropertyChanged(string propertyName)
@@ -25,13 +21,13 @@ namespace C_Validation_ByCustom
     }
 
     /// <summary>
-    /// Notify a property change that uses CallerMemberName attribute
+    /// Notify a property change that uses CallerMemberName attribute.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The type.</typeparam>
     /// <param name="backingField">Backing field of property</param>
     /// <param name="value">Value to give backing field</param>
-    /// <param name="propertyName"></param>
-    /// <returns></returns>
+    /// <param name="propertyName">The name of the property.</param>
+    /// <returns>Success/Failure.</returns>
     protected virtual bool OnPropertyChanged<T>(ref T backingField, T value, [CallerMemberName] string propertyName = "")
     {
       if (EqualityComparer<T>.Default.Equals(backingField, value))
