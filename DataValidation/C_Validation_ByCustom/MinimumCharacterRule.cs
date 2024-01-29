@@ -8,18 +8,18 @@ using System.Windows.Controls;
 
 namespace C_Validation_ByCustom
 {
-    public class MinimumCharacterRule : ValidationRule
+  public class MinimumCharacterRule : ValidationRule
+  {
+    public int MinimumCharacters { get; set; }
+
+    public override ValidationResult Validate(object value, CultureInfo cultureInfo)
     {
-        public int MinimumCharacters { get; set; }
+      string charString = value as string;
 
-        public override ValidationResult Validate(object value, CultureInfo cultureInfo)
-        {
-            string charString = value as string;
+      if (charString.Length < MinimumCharacters)
+        return new ValidationResult(false, $"User atleast {MinimumCharacters} characters.");
 
-            if (charString.Length < MinimumCharacters)
-                return new ValidationResult(false, $"User atleast {MinimumCharacters} characters.");
-
-            return new ValidationResult(true, null);
-        }
+      return new ValidationResult(true, null);
     }
+  }
 }

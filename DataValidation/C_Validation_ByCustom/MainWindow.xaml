@@ -6,23 +6,23 @@
         xmlns:local="clr-namespace:C_Validation_ByCustom"
         mc:Ignorable="d"
         Title="Validation By Custom Rule" Height="450" Width="800">
-    <Window.DataContext>
-        <local:RegistrationVM/>
-    </Window.DataContext>
-    <Grid Margin="100">
-        <StackPanel>
-            <Label>Username</Label>
-            <TextBox Validation.ErrorTemplate="{StaticResource errorTemplate}">
-                <TextBox.Text>
-                    <Binding Path="Username" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
-                        <Binding.ValidationRules>
-                            <local:MinimumCharacterRule MinimumCharacters="5"/>
-                        </Binding.ValidationRules>
-                    </Binding>
-                </TextBox.Text>
-            </TextBox>
+  <Window.DataContext>
+    <local:RegistrationVM/>
+  </Window.DataContext>
+  <Grid Margin="100">
+    <StackPanel>
+      <Label>Username</Label>
+      <TextBox Validation.ErrorTemplate="{StaticResource errorTemplate}">
+        <TextBox.Text>
+          <Binding Path="Username" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged">
+            <Binding.ValidationRules>
+              <local:MinimumCharacterRule MinimumCharacters="5"/>
+            </Binding.ValidationRules>
+          </Binding>
+        </TextBox.Text>
+      </TextBox>
 
-            <Button>Submit</Button>
-        </StackPanel>
-    </Grid>
+      <Button>Submit</Button>
+    </StackPanel>
+  </Grid>
 </Window>
