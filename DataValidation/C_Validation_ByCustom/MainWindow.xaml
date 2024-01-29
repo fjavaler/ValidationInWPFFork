@@ -9,7 +9,8 @@
   <Window.DataContext>
     <local:RegistrationVM/>
   </Window.DataContext>
-  <Grid Margin="100">
+  <Grid
+    Margin="100">
     <StackPanel>
       <Label>Username</Label>
       <TextBox
