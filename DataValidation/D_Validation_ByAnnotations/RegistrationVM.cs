@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace D_Validation_ByAnnotations
 {
@@ -32,9 +27,13 @@ namespace D_Validation_ByAnnotations
     /// <summary>
     /// Property validation method.
     /// </summary>
+    /// <remarks>
+    /// Validator.ValidateProperty references the property attributes in
+    /// order to find out what criteria should be satisfied for validation.
+    /// </remarks>
     /// <typeparam name="T">Generic type.</typeparam>
     /// <param name="value">The value to validate.</param>
-    /// <param name="name"></param>
+    /// <param name="name">Property name.</param>
     private void ValidateProperty<T>(T value, string name)
     {
       Validator.ValidateProperty(value, new ValidationContext(this, null, null)
