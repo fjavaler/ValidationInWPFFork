@@ -6,16 +6,16 @@
         xmlns:local="clr-namespace:D_Validation_ByAnnotations"
         mc:Ignorable="d"
         Title="Validation By Annotations W/ Error Template" Height="450" Width="800">
-    <Window.DataContext>
-        <local:RegistrationVM/>
-    </Window.DataContext>
-    <Grid Margin="100">
-        <StackPanel>
-            <Label>Username</Label>
-            <TextBox Text="{Binding Username, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}"
+  <Window.DataContext>
+    <local:RegistrationVM/>
+  </Window.DataContext>
+  <Grid Margin="100">
+    <StackPanel>
+      <Label>Username</Label>
+      <TextBox Text="{Binding Username, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}"
                      Validation.ErrorTemplate="{StaticResource errorTemplate}"/>
 
-            <Button>Submit</Button>
-        </StackPanel>
-    </Grid>
+      <Button>Submit</Button>
+    </StackPanel>
+  </Grid>
 </Window>
