@@ -21,6 +21,7 @@
             ValidatesOnDataErrors="True"
             UpdateSourceTrigger="PropertyChanged">
             <Binding.ValidationRules>
+              <!--Notice that we can set public property MinimumCharacters here from within the XAML!-->
               <local:MinimumCharacterRule MinimumCharacters="5"/>
             </Binding.ValidationRules>
           </Binding>
